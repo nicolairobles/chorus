@@ -4,22 +4,22 @@
 
 @font-face {
     font-family: "League Spartan";
-    src: url("LeagueSpartan-Bold.otf");
+    src: url(asset-path("LeagueSpartan-Bold.otf"));
 }
 
 @font-face{
     font-family:"Unna Bold";
-    src:url("Unna-Bold.ttf");
+    src:url(asset-path("Unna-Bold.ttf"));
 }
 
 @font-face{
     font-family:"Unna Regular";
-    src:url("Unna-Regular.ttf");
+    src:url(asset-path("Unna-Regular.ttf"));
 }
 
 @font-face{
     font-family:"Montserrat Regular";
-    src:url("Montserrat-Regular.ttf");
+    src:url(asset-path("Montserrat-Regular.ttf"));
 }
 
 #background {
