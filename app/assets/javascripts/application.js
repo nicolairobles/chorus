@@ -17,11 +17,11 @@
 $(document).ready(function(){
 		
 	autoPlayYouTubeModal();
+	flashDisappear();
 
 	//FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
 	function autoPlayYouTubeModal() {
 	    var trigger = $("body").find('[data-toggle="modal"]');
-	    debugger;
 	    trigger.click(function () {
 	        var theModal = $(this).data("target"),
 	            videoSRC = $(this).attr("data-theVideo"),
@@ -34,6 +34,14 @@ $(document).ready(function(){
 	            $(theModal + ' iframe').attr('src', videoSRC);
 	        });
 	    });
+	}
+
+	// Function to have flash messages disappear after 3 seconds
+	function flashDisappear(){
+		var $flashMessage = $(".flash");
+		setTimeout(function() {
+			$flashMessage.hide();
+		}, 3000);
 	}
 
 });

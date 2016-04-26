@@ -28,10 +28,11 @@ class ProspectsController < ApplicationController
 
     respond_to do |format|
       if @prospect.save
-        flash[:success] = "Thanks! I'll be in touch soon!"
+        flash[:success] = "Thanks! We'll be in touch soon!"
         format.html { redirect_to "/" }
       else
-        format.html { render :new }
+        format.html { redirect_to "/" }        
+        flash[:error] = "Try again. Enter a valid email address."
         format.json { render json: @prospect.errors, status: :unprocessable_entity }
       end
     end

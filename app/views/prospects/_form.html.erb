@@ -1,6 +1,6 @@
 <%= form_for(@prospect) do |f| %>
   <% if @prospect.errors.any? %>
-    <div id="error_explanation">
+    <div id="flash success">
       <h2><%= pluralize(@prospect.errors.count, "error") %> prohibited this prospect from being saved:</h2>
 
       <ul>
@@ -29,6 +29,7 @@
 <!-- Flash Message -->
   <% flash.each do |key, value| %>
   <%= content_tag :div, value, class: "flash #{key}" %>
-  
+    
+
 <% end %>
 <% end %>

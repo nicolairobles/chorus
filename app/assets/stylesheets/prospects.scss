@@ -73,13 +73,18 @@ form#new_prospect{
         input{
             border: solid;
             border-color: black;
-            width: 200px;
+            width: 300px;
             line-height: 2em;
         }
     }
     div.field{
         input{
             text-indent: 1em;
+        }
+        div.field_with_errors{
+            padding: 0;
+            background-color: red;
+            display: inline-block;
         }
     }
     div.actions{
@@ -152,14 +157,31 @@ form#new_prospect{
 }
 
 div.flash.success{
-    padding-top: 17px;
-    background-color: orange;
-    width: 200px;
+    padding-top: 10px;
+    background-color: #4FB80D;
+    color: white;
+    width: 598px;
     border-radius: 176;
     border: solid;
-    border-color: orange;
+    border-color: #4FB80D;
     border-radius: 51;
-    height: 49px;
+    height: 35px;
+    transition-timing-function: linear;
+    transition:opacity 1s linear;
+}
+
+div.flash.error{
+    padding-top: 10px;
+    background-color: #FA3608;
+    color: white;
+    width: 598px;
+    border-radius: 176;
+    border: solid;
+    border-color: #FA3608;
+    border-radius: 51;
+    height: 35px;
+    transition-timing-function: linear;
+    transition:opacity 1s linear;
 }
 
 
@@ -176,8 +198,35 @@ div.flash.success{
     .container h1 { font-size: 3em; }
 }
 
-@media only screen and (max-width: 607px) {
+@media only screen and (max-width: 633px) {
     .container h1 { font-size: 2.5em; }
+    form#new_prospect{
+        div.field, .actions{
+            display: block;
+            input{
+                text-align: center;
+            }
+        }
+        div.field{
+            input{
+                text-indent: 0em;
+            }
+        }
+        div.actions{
+            margin-left: 5px;
+            margin-top: 25px;
+
+        }
+    }
+    div.flash.error{
+        width:300px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    div.flash.success{
+        width:300px;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 519px) {
@@ -206,6 +255,8 @@ div.flash.success{
         padding: 30px 0;
     }   
 }
+
+
 
 
 
