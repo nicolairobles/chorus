@@ -22,6 +22,10 @@
     src:url(asset-path("Montserrat-Regular.ttf"));
 }
 
+*{
+    font-family: "Montserrat Regular";
+}
+
 #background {
     position: fixed;
     top: 50%;
@@ -147,9 +151,23 @@ form#new_prospect{
     height:100%;
 }
 
+div.flash.success{
+    padding-top: 17px;
+    background-color: orange;
+    width: 200px;
+    border-radius: 176;
+    border: solid;
+    border-color: orange;
+    border-radius: 51;
+    height: 49px;
+}
 
 
 
+
+
+
+// MEDIA QUERIES; MUST BE AT END
 @media only screen and (max-width: 1178px) {
     .container h1 { font-size: 3.5em; }
 }
@@ -184,7 +202,12 @@ form#new_prospect{
 
         }
     }
+    div.flash.success{
+        padding: 30px 0;
+    }   
 }
+
+
 
 // Primary Color Pallete 
 // #D19E2A
