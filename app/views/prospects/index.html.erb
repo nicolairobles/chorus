@@ -16,11 +16,12 @@
   </thead>
 
   <tbody>
-    <% @prospects.each do |prospect| %>
+    <% @prospects.each do |prospect| 
+      %>
       <tr>
         <td style="padding-right: 25px"><%= prospect.email %></td>
         <td style="padding-right: 25px"><%= link_to 'Edit', edit_prospect_path(prospect) %></td>
-        <td style="padding-right: 25px"><%=prospect.created_at.strftime("%B %d %Y at %I:%M %p")%></td>
+        <td style="padding-right: 25px"><%=prospect.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("%B %d %Y at %l:%M %p %Z ")%></td>
         <td><%= link_to 'Destroy', prospect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
