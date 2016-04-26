@@ -124,9 +124,13 @@ form#new_prospect{
     cursor:pointer;
     height:40px;
     width:40px;
+    opacity: 1;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
 }
 #voverlay .close:hover{
-
+    opacity: 1;
+    background-color: rgba(1,1,1,0);
 }
 
 #voverlay .vcontainer{
