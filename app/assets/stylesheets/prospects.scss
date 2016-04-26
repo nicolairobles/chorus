@@ -1,0 +1,194 @@
+// Place all the styles related to the Prospects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+    font-family: "League Spartan";
+    src: url("LeagueSpartan-Bold.otf");
+}
+
+@font-face{
+    font-family:"Unna Bold";
+    src:url("Unna-Bold.ttf");
+}
+
+@font-face{
+    font-family:"Unna Regular";
+    src:url("Unna-Regular.ttf");
+}
+
+@font-face{
+    font-family:"Montserrat Regular";
+    src:url("Montserrat-Regular.ttf");
+}
+
+#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+.container {
+    text-align: left;
+    color: black;
+    h1 {
+        font-family: League Spartan;
+        font-size: 4em;
+        line-height: 125%;
+    }
+    p{
+        font-family: Unna Regular;
+        font-size: 2em;
+        line-height: 125%;
+    }
+}
+
+
+#logo{
+    img{
+        padding-left: 20px;
+        width: 175px;
+    }
+}
+
+form#new_prospect{
+    div.field, .actions{
+        display: inline-block;
+        font-family: Montserrat Regular;
+        font-size: 1.25em;
+        margin: 0;
+        padding: 0;
+        height: 15px;
+        input{
+            border: solid;
+            border-color: black;
+            width: 200px;
+            line-height: 2em;
+        }
+    }
+    div.field{
+        input{
+            text-indent: 1em;
+        }
+    }
+    div.actions{
+        input{
+            margin: 0;
+            margin-left: -5px;
+            padding: 0;
+            border: solid 4px;
+            border-color: black;
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+
+/***** VIDEO OVERLAY PROPERTIES *****/
+/* the overlayed element */
+#voverlay {
+    
+    /* growing background image */
+    background-image:url(back.png);
+    
+    /* dimensions after the growing animation finishes  */
+    width:640px;
+    height:480px;
+    
+    /* initially overlay is hidden */
+    display:none;
+    
+    /* some padding to layout nested elements nicely  */
+    padding:10px;
+
+    /* fix for bootstrap / normalize / etc... */
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/* default close button positioned on upper right corner */
+#voverlay .close {
+    background-image:url(close.png);
+    position:absolute;
+    right:-20px;
+    top:-20px;
+    cursor:pointer;
+    height:40px;
+    width:40px;
+}
+#voverlay .close:hover{
+
+}
+
+#voverlay .vcontainer{
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;    
+    background:url(loading.gif) no-repeat 50% 50%;
+
+
+}
+
+#voverlay .vcontainer > div{
+    height:100%;
+}
+
+
+
+
+@media only screen and (max-width: 1178px) {
+    .container h1 { font-size: 3.5em; }
+}
+
+@media only screen and (max-width: 705px) {
+    .container h1 { font-size: 3em; }
+}
+
+@media only screen and (max-width: 607px) {
+    .container h1 { font-size: 2.5em; }
+}
+
+@media only screen and (max-width: 519px) {
+    .container h1 { font-size: 2em; }
+    .container p { font-size: 1.5em }
+    form#new_prospect{
+        div.field, .actions{
+            font-size: 1.25em;
+            display: block;
+            input{
+                text-align: center;
+            }
+        }
+        div.field{
+            input{
+                text-indent: 0em;
+            }
+        }
+        div.actions{
+            margin-left: 5px;
+            margin-top: 25px;
+
+        }
+    }
+}
+
+// Primary Color Pallete 
+// #D19E2A
+// #EBF532
+// #81C91C
+// #41AAAC
+// #33868D
+// #1D4B43
+// #032A81
+
+

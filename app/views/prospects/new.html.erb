@@ -1,0 +1,63 @@
+<nav class="navbar" role="navigation">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <!-- Logo -->
+        <h1 id="site-name" class="logo">
+          <a href="/">
+            <div id="logo">
+              <!--[if gte IE 9]><!-->
+                <%= image_tag 'chorus_logo_3.png' %> 
+            </div>
+          </a>
+        </h1>
+      </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+</header><!-- /header -->
+
+<!-- Page Content -->
+<a class="voverlay" href="http://www.youtube.com/v/UnJl8M_7S0E?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Chorus">
+  <%= image_tag 'steve_jobs_placeholder.png', id:"background" %>
+  <span></span>
+</a>
+
+<!-- <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/loFtozxZG0s">
+  <%= image_tag 'steve_jobs_placeholder.png', id:"background" %>
+</a> -->
+<!-- Modal -->
+<!-- <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div>
+                    <iframe width="900" height="600" src="" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <article class="col-sm-12 col-md-12">
+      <h1>Transparent Representation.</h1>
+      <h1>Start a Movement.</h1>
+      <br>
+    </article>
+    <article class="col-sm-12 col-md-12">
+      <p>Join our waiting list.</p>
+      <br>
+          <%= render 'form' %>
+    </article>
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+
+
+
