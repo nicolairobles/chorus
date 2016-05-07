@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ div#myCarousel.carousel.slide{
+ 	background-color: white;
+ }
+ div.carousel-inner{
+ 	background-color: white;
+ }
