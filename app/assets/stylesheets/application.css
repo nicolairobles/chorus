@@ -14,9 +14,30 @@
  *= require_self
  */
 
- div#myCarousel.carousel.slide{
- 	background-color: white;
- }
- div.carousel-inner{
- 	background-color: white;
- }
+@font-face {
+    font-family: "League Spartan";
+    src: url(asset-path("LeagueSpartan-Bold.otf"));
+}
+
+@font-face{
+    font-family:"Unna Bold";
+    src:url(asset-path("Unna-Bold.ttf"));
+}
+
+@font-face{
+    font-family:"Unna Regular";
+    src:url(asset-path("Unna-Regular.ttf"));
+}
+
+@font-face{
+    font-family:"Montserrat Regular";
+    src:url(asset-path("Montserrat-Regular.ttf"));
+}
+
+*{
+    font-family: "Montserrat Regular";
+}
+
+
+
+

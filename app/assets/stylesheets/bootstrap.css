@@ -11,6 +11,7 @@ html {
 }
 body {
   margin: 0;
+  font-family: "Montserrat Regular"
 }
 article,
 aside,
@@ -114,7 +115,7 @@ optgroup,
 select,
 textarea {
   margin: 0;
-  font: inherit;
+  /*font: inherit;*/
   color: inherit;
 }
 button {
@@ -1082,7 +1083,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat Regular", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -1092,9 +1093,9 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
+  font-family: "Montserrat";
   font-size: inherit;
-  line-height: inherit;
+  /*line-height: inherit;*/
 }
 a {
   color: #337ab7;
@@ -1775,6 +1776,24 @@ pre code {
 .col-xs-offset-0 {
   margin-left: 0;
 }
+
+/*
+*/
+/*THIS CHANGED THE DISPLAY OF YOUTUBE IFRAME!!!!!!!!!!*/
+/*
+*/
+/*
+*/
+
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  float: left;
+}
+/*
+*/
+/*
+*/
+/*
+*/
 @media (min-width: 768px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
@@ -6250,19 +6269,19 @@ button.close {
   position: relative;
   display: none;
   background-color: white;
-  -webkit-transition: 1s ease-in-out left;
-       -o-transition: 1s ease-in-out left;
-          transition: 1s ease-in-out left;
+  -webkit-transition: 2.5s ease-in-out left;
+       -o-transition: 2.5s ease-in-out left;
+          transition: 2.5s ease-in-out left;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  line-height: 1;
+  line-height: 5;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 1s ease-in-out;
-         -o-transition:      -o-transform 1s ease-in-out;
-            transition:         transform 1s ease-in-out;
+    -webkit-transition: -webkit-transform 2.5s ease-in-out;
+         -o-transition:      -o-transform 2.5s ease-in-out;
+            transition:         transform 2.5s ease-in-out;
 
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -6285,7 +6304,7 @@ button.close {
   .carousel-inner > .item.next.left,
   .carousel-inner > .item.prev.right,
   .carousel-inner > .item.active {
-    left: 0;
+    /*left: 0;*/
     /**/
     /* INSERT BACKGROUND COLOR FOR PANELS*/
     background-color: white;

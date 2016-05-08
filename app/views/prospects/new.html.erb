@@ -18,38 +18,56 @@
 
 <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="0" class="active carousel-indicator"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="carousel-indicator"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="carousel-indicator"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
+<!-- 1st PANEL -->
         <div class="item active">
           <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            <div class="row">
+              <iframe width="600" height="338" class="video col-sm-6" src="https://www.youtube.com/embed/YvrQ_5US2vc?autoplay=1" frameborder="0" allowfullscreen></iframe>
+              <div class="carousel-caption caption-1 col-sm-5 col-sm-offset-4">
+                <h1>Chorus - Crowdsource Power</h1>
+                <p>A simple, fun, and effective way to make a difference in your community. Give your political representatives a performance review.</p>
+                <p>Exercise your rights – get heard! The government will listen when you say it in Chorus. Keep in touch. </p>
+                
+              </div>
             </div>
           </div>
         </div>
+<!-- 2nd PANEL -->
         <div class="item">
           <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            <div class="row">
+              <div class="carousel-caption caption-2 col-sm-5 col-sm-offset-4">
+                <h1>Why Join Chorus?</h1>
+                <h2>Make effective advocacy simple</h2>
+                <p>Hold representatives responsible in a way that online petitions cannot. Easily organize around a cause without the labor of door-to-door canvassing or hosting rallies (or supplement your existing advocacy, engaging people who might otherwise be too busy to participate.)</p>
+                <h2>Contacting your representatives shouldn’t be confusing</h2>
+                <p>Whatever your issue, we’ll make sure to convey your message to the right representatives. No research necessary on your part. No waiting endlessly for a .gov website to load.</p>
+              </div>
+              <iframe width="600" height="338" class="video col-sm-6" src="https://www.youtube.com/embed/YvrQ_5US2vc?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
             </div>
           </div>
         </div>
+<!-- 3rd PANEL -->
         <div class="item">
           <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            <div class="row">
+              <iframe width="600" height="338" class="video col-sm-6" src="https://www.youtube.com/embed/YvrQ_5US2vc?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+              <div class="carousel-caption caption-3 col-sm-5 col-sm-offset-4">
+                <h2>Bring Accountability to government</h2>
+                <p>Our ratings are based on concrete performance addressing the issues people care about most. We recognize representatives who are dedicated to serving their constituents – and expose those who aren’t.</p>
+                <p>Your government will listen when you say it in Chorus.</p>
+                
+              </div>
             </div>
           </div>
         </div>
@@ -65,10 +83,10 @@
     </div><!-- /.carousel -->
 
 
-<div class="container">
+<div class="container cta">
   <div class="row">
-    <article class="col-sm-12 col-md-12">
-      <p>Join our waiting list.</p>
+    <article class="cta col-sm-12 col-md-12">
+      <p>Like us on Facebook and subscribe to our email newsletter!</p>
       <br>
           <%= render 'form' %>
     </article>

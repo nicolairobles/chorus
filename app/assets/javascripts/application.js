@@ -15,9 +15,14 @@
 //= require_tree .
 
 $(document).ready(function(){
+
+	// Variables
+	var $carousel = $(".carousel.slide");
 		
+	// Functions
 	autoPlayYouTubeModal();
 	flashDisappear();
+	addEventListeners();
 
 	//FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
 	function autoPlayYouTubeModal() {
@@ -42,6 +47,19 @@ $(document).ready(function(){
 		setTimeout(function() {
 			$flashMessage.hide();
 		}, 3000);
+	}
+
+	// Start sliding after video is finished or click on button
+		
+	function startSlide(){
+		$carousel.attr('data-interval') = true;
+		// setTimeout(function(){
+		// }172000)
+	}
+	var addEventListeners = function(){
+		$("li.carousel-indicator").on("click", function(){
+			$carousel.attr('data-interval') = true;
+		})
 	}
 
 });
