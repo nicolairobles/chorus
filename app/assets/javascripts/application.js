@@ -56,7 +56,7 @@ $(document).ready(function(){
 		// setTimeout(function(){
 		// }172000)
 	}
-	var addEventListeners = function(){
+	function addEventListeners(){
 		$("li.carousel-indicator").on("click", function(){
 			$carousel.attr('data-interval') = true;
 		})
