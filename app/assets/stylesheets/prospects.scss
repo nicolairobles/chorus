@@ -1,556 +1,470 @@
-// Place all the styles related to the Prospects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 #background {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
 }
 
 .container {
-    text-align: left;
-    color: black;
-    h1 {
-        font-family: League Spartan;
-        font-size: 4em;
-        line-height: 125%;
-    }
-    h2{
-        font-family: Unna Bold;
-        font-size: 2em;
-        line-height: 125%;
-    }
-    p{
-        font-family: Unna Regular;
-        font-size: 2em;
-        line-height: 125%;
-    }
+  text-align: left;
+  color: black;
+}
+.container h1 {
+  font-family: League Spartan;
+  font-size: 4em;
+  line-height: 125%;
+}
+.container h2 {
+  font-family: Unna Bold;
+  font-size: 2em;
+  line-height: 125%;
+}
+.container p {
+  font-family: Unna Regular;
+  font-size: 2em;
+  line-height: 125%;
 }
 
-
-#logo{
-    img{
-        padding-left: 20px;
-        width: 175px;
-    }
+#logo img {
+  padding-left: 20px;
+  width: 175px;
 }
 
-form#new_prospect{
-    div.field, .actions{
-        display: inline-block;
-        font-family: Montserrat Regular;
-        font-size: 1.25em;
-        margin: 0;
-        padding: 0;
-        height: 15px;
-        input{
-            border: solid;
-            border-color: black;
-            width: 300px;
-            line-height: 2em;
-        }
-    }
-    div.field{
-        input{
-            text-indent: 1em;
-        }
-        div.field_with_errors{
-            padding: 0;
-            background-color: red;
-            display: inline-block;
-        }
-    }
-    div.actions{
-        input{
-            margin: 0;
-            margin-left: -5px;
-            padding: 0;
-            border: solid 4px;
-            border-color: black;
-            background-color: black;
-            color: white;
-        }
-    }
+form#new_prospect div.field, form#new_prospect .actions {
+  display: inline-block;
+  font-family: Montserrat Regular;
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
+  height: 15px;
 }
-
+form#new_prospect div.field input, form#new_prospect .actions input {
+  border: solid;
+  border-color: black;
+  width: 300px;
+  line-height: 2em;
+}
+form#new_prospect div.field input {
+  text-indent: 1em;
+}
+form#new_prospect div.field div.field_with_errors {
+  padding: 0;
+  background-color: red;
+  display: inline-block;
+}
+form#new_prospect div.actions input {
+  margin: 0;
+  margin-left: -5px;
+  padding: 0;
+  border: solid 4px;
+  border-color: black;
+  background-color: black;
+  color: white;
+}
 
 /***** VIDEO OVERLAY PROPERTIES *****/
 /* the overlayed element */
 #voverlay {
-    
-    /* growing background image */
-    background-image: url(asset-path('back.png'));
-    
-    /* dimensions after the growing animation finishes  */
-    width:640px;
-    height:480px;
-    
-    /* initially overlay is hidden */
-    display:none;
-    
-    /* some padding to layout nested elements nicely  */
-    padding:10px;
-
-    /* fix for bootstrap / normalize / etc... */
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+  /* growing background image */
+  background-image: url(asset-path("back.png"));
+  /* dimensions after the growing animation finishes  */
+  width: 640px;
+  height: 480px;
+  /* initially overlay is hidden */
+  display: none;
+  /* some padding to layout nested elements nicely  */
+  padding: 10px;
+  /* fix for bootstrap / normalize / etc... */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 /* default close button positioned on upper right corner */
 #voverlay .close {
-    background-image: url(asset-path("close.png"));
-    position:absolute;
-    right:-20px;
-    top:-20px;
-    cursor:pointer;
-    height:40px;
-    width:40px;
-    opacity: 1;
-    -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%);
-}
-#voverlay .close:hover{
-    opacity: 1;
-    background-color: rgba(1,1,1,0);
+  background-image: url(asset-path("close.png"));
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  opacity: 1;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
-#voverlay .vcontainer{
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;    
-    background:url(asset-path("loading.gif")) no-repeat 50% 50%;
-
-
+#voverlay .close:hover {
+  opacity: 1;
+  background-color: rgba(1, 1, 1, 0);
 }
 
-#voverlay .vcontainer > div{
-    height:100%;
+#voverlay .vcontainer {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(asset-path("loading.gif")) no-repeat 50% 50%;
 }
 
-div.flash.success{
-    padding-top: 10px;
-    background-color: #4FB80D;
-    color: white;
-    width: 598px;
-    border-radius: 176;
-    border: solid;
-    border-color: #4FB80D;
-    border-radius: 51;
-    height: 35px;
-    transition-timing-function: linear;
-    transition:opacity 1s linear;
+#voverlay .vcontainer > div {
+  height: 100%;
 }
 
-div.flash.error{
-    padding-top: 10px;
-    background-color: #FA3608;
-    color: white;
-    width: 598px;
-    border-radius: 176;
-    border: solid;
-    border-color: #FA3608;
-    border-radius: 51;
-    height: 35px;
-    transition-timing-function: linear;
-    transition:opacity 1s linear;
+div.flash.success {
+  padding-top: 10px;
+  background-color: #4FB80D;
+  color: white;
+  width: 598px;
+  border-radius: 176;
+  border: solid;
+  border-color: #4FB80D;
+  border-radius: 51;
+  height: 35px;
+  transition-timing-function: linear;
+  transition: opacity 1s linear;
 }
 
-
-// CAROUSEL CONFIGS
-
-div.carousel-caption{
-    text-align: left;
-    color: black;
-    h1 {
-        font-family: League Spartan;
-        font-size: 4em;
-        line-height: 125%;
-    }
-    h2{
-        font-family: Unna Bold;
-        font-size: 2em;
-        line-height: 125%;
-    }
-    p{
-        font-family: Unna Regular;
-        font-size: 2em;
-        line-height: 125%;
-    }
+div.flash.error {
+  padding-top: 10px;
+  background-color: #FA3608;
+  color: white;
+  width: 598px;
+  border-radius: 176;
+  border: solid;
+  border-color: #FA3608;
+  border-radius: 51;
+  height: 35px;
+  transition-timing-function: linear;
+  transition: opacity 1s linear;
 }
 
-article.cta{
-    margin-top: -50px;
-    margin-left: 258px;
-    p{
-        margin-left: 20px;
-        font-size: 1.75em;
-    }
+div.carousel-caption {
+  text-align: left;
+  color: black;
+}
+div.carousel-caption h1 {
+  font-family: League Spartan;
+  font-size: 4em;
+  line-height: 125%;
+}
+div.carousel-caption h2 {
+  font-family: Unna Bold;
+  font-size: 2em;
+  line-height: 125%;
+}
+div.carousel-caption p {
+  font-family: Unna Regular;
+  font-size: 2em;
+  line-height: 125%;
 }
 
-// Allows iframe to change size
-@media (min-width: 0px){
-    .col-sm-6 {
-        width: 62%;
-        margin-left: -99px;
-        height: 391px;
-    }
+article.cta {
+  margin-top: -50px;
+  margin-left: 258px;
+}
+article.cta p {
+  margin-left: 20px;
+  font-size: 1.75em;
 }
 
-iframe.video{
-    margin-top: 50px;
+@media (min-width: 0px) {
+  .col-sm-6 {
+    width: 62%;
+    margin-left: -99px;
+    height: 391px;
+  }
+}
+iframe.video {
+  margin-top: 50px;
 }
 
-div.carousel-caption{
-    .caption-2{
-        margin-top: 100px;
-    }
-    h1 { font-size: 2.7em; 
-        text-align: center;
-        margin-bottom: 35px;
-    }
-
-    p { font-size: 2em; }
-} 
-
-// separates iframe from copy and moves text up and down
-div.item.active{
-    height: 425px;
+div.carousel-caption .caption-2 {
+  margin-top: 100px;
 }
-// ensures following slides are the same padding top
-.carousel .item{
-    height: 425px;
+div.carousel-caption h1 {
+  font-size: 2.7em;
+  text-align: center;
+  margin-bottom: 35px;
 }
-.carousel.slide{
-    height: 550px;
+div.carousel-caption p {
+  font-size: 2em;
 }
 
-.container h1 { font-size: 3.5em; }
-
-h2{
-
+div.item.active {
+  height: 425px;
 }
 
+.carousel .item {
+  height: 425px;
+}
 
+.carousel.slide {
+  height: 550px;
+}
 
+.container h1 {
+  font-size: 3.5em;
+}
 
-// MEDIA QUERIES; MUST BE AT END
 @media only screen and (max-width: 1360px) {
-    div.carousel-caption{
-        h1 { font-size: 2em; 
-            text-align: center;}
-        p { font-size: 2em; }
-    } 
-    // Allows iframe to change size
-    @media (min-width: 0px){
-        .col-sm-6 {
-            width: 58%;
-            margin-left: -70px;
-            height: 365px;
-        }
-    }
+  div.carousel-caption h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  div.carousel-caption p {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 1360px) and (min-width: 0px) {
+  .col-sm-6 {
+    width: 58%;
+    margin-left: -70px;
+    height: 365px;
+  }
 }
 @media only screen and (max-width: 1337px) {
-    div.carousel-caption{
-        p { font-size: 1.75em; }
-    } 
-    // Allows iframe to change size
-    @media (min-width: 0px){
-        .col-sm-6 {
-            width: 55%;
-            margin-left: -25px;
-            height: 345px;
-        }
-    }
+  div.carousel-caption p {
+    font-size: 1.75em;
+  }
 }
-
+@media only screen and (max-width: 1337px) and (min-width: 0px) {
+  .col-sm-6 {
+    width: 55%;
+    margin-left: -25px;
+    height: 345px;
+  }
+}
 @media only screen and (max-width: 1199px) {
-
-    article.cta{
-        margin-left: 140px;
-    }
-    // Allows iframe to change size
-    @media (min-width: 0px){
-        .col-sm-6 {
-            width: 65.5%;
-            margin-left: -100px;
-            height: 340px;
-        }
-    }
+  article.cta {
+    margin-left: 140px;
+  }
 }
-
+@media only screen and (max-width: 1199px) and (min-width: 0px) {
+  .col-sm-6 {
+    width: 65.5%;
+    margin-left: -100px;
+    height: 340px;
+  }
+}
 @media only screen and (max-width: 1178px) {
-    .container h1 { font-size: 3.5em; }
-
+  .container h1 {
+    font-size: 3.5em;
+  }
 }
-
 @media only screen and (max-width: 991px) {
-    .container h1 { font-size: 3.5em; }
-    article.cta{
-        margin-left: 50px;
-    }
-    // Allows iframe to change size
-    @media (min-width: 0px){
-        .col-sm-6 {
-            width: 75%;
-            margin-left: -100px;
-            height: 300px;
-        }
-    }
-    // Carousel text
-    div.carousel-caption{
-        margin-left: 375px;
+  .container h1 {
+    font-size: 3.5em;
+  }
 
-        h1{
-            font-size: 1.5em;
-        }
-        p { font-size: 1.6em; }
-    } 
-    // Moves iframe up/down
-    iframe.video{
-        margin-top: 75px;
-    }
-    // makes entire carousel taller
-    .carousel.slide{
-        height: 445px;
-    }
+  article.cta {
+    margin-left: 50px;
+  }
 }
+@media only screen and (max-width: 991px) and (min-width: 0px) {
+  .col-sm-6 {
+    width: 75%;
+    margin-left: -100px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  div.carousel-caption {
+    margin-left: 375px;
+  }
+  div.carousel-caption h1 {
+    font-size: 1.5em;
+  }
+  div.carousel-caption p {
+    font-size: 1.6em;
+  }
 
+  iframe.video {
+    margin-top: 75px;
+  }
+
+  .carousel.slide {
+    height: 445px;
+  }
+}
 @media only screen and (max-width: 936px) {
-//     .container h1 { font-size: 3em; }
-    div.carousel-caption{
-        height: 350px;
-        margin-left: -65px;
-        width: 700px;
-        h1 { font-size: 3em; }
-        p { font-size: 2em; }
-    } 
-//     article.cta{
-//         margin-top: -40px;
-//         margin-left: 70px;
-//     }
-    iframe.video{
-        margin-top: 325px;
-        margin-left: 0px;
-    }
-    // separates iframe from copy and moves text up and down
-    div.item.active{
-        height: 350px;
-        // display:     inline-block;
-    }
-    // ensures following slides are the same padding top
-    .carousel .item{
-        height: 350px;
-    }
-    // makes entire carousel taller
-    .carousel.slide{
-        height: 800px;
-    }
-//     // moves text up or down
-//     .carousel-inner{
-//         height: 900px;
-//     }
-    // Allows iframe to change size
-    @media (min-width: 320px){
-        .col-sm-6 {
-            width: 100%;
-            margin-left: -99px;
-            height: 405px;
-            float: left;
-        }
-    }
+  div.carousel-caption {
+    height: 350px;
+    margin-left: -65px;
+    width: 700px;
+  }
+  div.carousel-caption h1 {
+    font-size: 3em;
+  }
+  div.carousel-caption p {
+    font-size: 2em;
+  }
 
+  iframe.video {
+    margin-top: 325px;
+    margin-left: 0px;
+  }
+
+  div.item.active {
+    height: 350px;
+  }
+
+  .carousel .item {
+    height: 350px;
+  }
+
+  .carousel.slide {
+    height: 800px;
+  }
 }
-
+@media only screen and (max-width: 936px) and (min-width: 320px) {
+  .col-sm-6 {
+    width: 100%;
+    margin-left: -99px;
+    height: 405px;
+    float: left;
+  }
+}
 @media only screen and (max-width: 767px) {
-    .container h1 { font-size: 3em; }
-    @media (min-width: 320px){
-        .col-sm-6 {
-            width: 96.75%;
-            margin-left: 100px;
-            height: 400px;
-        }
-    }
-    iframe.video{
-        margin-top: 325px;
-        margin-left: 17px;
-    }
-
+  .container h1 {
+    font-size: 3em;
+  }
 }
-
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  .col-sm-6 {
+    width: 96.75%;
+    margin-left: 100px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  iframe.video {
+    margin-top: 325px;
+    margin-left: 17px;
+  }
+}
 @media only screen and (max-width: 712px) {
-    div.carousel-caption{
-        // height: 350px;
-        // margin-left: 24px;
-        // width: 436px;
-        h1 { font-size: 2em; }
-        p { font-size: 1.5em; }
-    } 
-    // Allows iframe to change size
-    @media (min-width: 320px){
-        .col-sm-6 {
-            width: 60%;
-            margin-left: -99px;
-            height: 300px;
-        }
-    }
-    // Allows text box to change size
-    @media (min-width: 320px){
-        .col-sm-5.carousel-caption {
-            width: 436px;
-            margin-left: 24px;
-            height: 350px;
-        }
-    }
-    iframe.video{
-        margin-top: 265px;
-        margin-left: 130px;
-    }
-    // makes entire carousel taller
-    .carousel.slide{
-        height: 635px;
-    }
-    div.container.cta{
-        margin-left: 150px;
-        width: 100px;
-        
-    }
-    .container h1 { font-size: 2.5em; }
-    form#new_prospect{
-        div.field, .actions{
-            display: block;
-            input{
-                text-align: center;
-            }
-        }
-        div.field{
-            input{
-                text-indent: 0em;
-            }
-        }
-        div.actions{
-            margin-left: 5px;
-            margin-top: 25px;
-
-        }
-    }
-    div.flash.error{
-        width:300px;
-        margin-top: 20px;
-        text-align: center;
-    }
-    div.flash.success{
-        width:300px;
-        text-align: center;
-    }
+  div.carousel-caption h1 {
+    font-size: 2em;
+  }
+  div.carousel-caption p {
+    font-size: 1.5em;
+  }
 }
+@media only screen and (max-width: 712px) and (min-width: 320px) {
+  .col-sm-6 {
+    width: 60%;
+    margin-left: -99px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 712px) and (min-width: 320px) {
+  .col-sm-5.carousel-caption {
+    width: 436px;
+    margin-left: 24px;
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 712px) {
+  iframe.video {
+    margin-top: 265px;
+    margin-left: 130px;
+  }
 
+  .carousel.slide {
+    height: 635px;
+  }
 
+  div.container.cta {
+    margin-left: 150px;
+    width: 100px;
+  }
+
+  .container h1 {
+    font-size: 2.5em;
+  }
+
+  form#new_prospect div.field, form#new_prospect .actions {
+    display: block;
+  }
+  form#new_prospect div.field input, form#new_prospect .actions input {
+    text-align: center;
+  }
+  form#new_prospect div.field input {
+    text-indent: 0em;
+  }
+  form#new_prospect div.actions {
+    margin-left: 5px;
+    margin-top: 25px;
+  }
+
+  div.flash.error {
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  div.flash.success {
+    width: 300px;
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 600px) {
-    div.container.cta{
-        margin-left: -25px;
-        width: 100px;
-    }
-    // Allows iframe to change size
-    @media (min-width: 320px){
-        .col-sm-6 {
-            margin-left: -75px;
-            width: 450px;
-            height: 250px;
-        }
-    }
-    // Allows text box to change size
-    @media (min-width: 320px){
-        .col-sm-5.carousel-caption {
-            margin-left: -75px;
-        }
-    }
-    iframe.video{
-        margin-top: 275px;
-        margin-left: 0px;
-    }
-    // .container h1 { font-size: 2.5em; }
-    // form#new_prospect{
-    //     div.field, .actions{
-    //         display: block;
-    //         input{
-    //             text-align: center;
-    //         }
-    //     }
-    //     div.field{
-    //         input{
-    //             text-indent: 0em;
-    //         }
-    //     }
-    //     div.actions{
-    //         margin-left: 5px;
-    //         margin-top: 25px;
-
-    //     }
-    // }
-    // div.flash.error{
-    //     width:300px;
-    //     margin-top: 20px;
-    //     text-align: center;
-    // }
-    // div.flash.success{
-    //     width:300px;
-    //     text-align: center;
-    // }
+  div.container.cta {
+    margin-left: -25px;
+    width: 100px;
+  }
 }
-
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .col-sm-6 {
+    margin-left: -75px;
+    width: 450px;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .col-sm-5.carousel-caption {
+    margin-left: -75px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  iframe.video {
+    margin-top: 275px;
+    margin-left: 0px;
+  }
+}
 @media only screen and (max-width: 519px) {
-    .container h1 { font-size: 2em; }
-    .container p { font-size: 1.5em }
-    form#new_prospect{
-        div.field, .actions{
-            font-size: 1.25em;
-            display: block;
-            input{
-                text-align: center;
-            }
-        }
-        div.field{
-            input{
-                text-indent: 0em;
-            }
-        }
-        div.actions{
-            margin-left: 5px;
-            margin-top: 25px;
+  .container h1 {
+    font-size: 2em;
+  }
 
-        }
-    }
-    div.flash.success{
-        padding: 30px 0;
-    }   
+  .container p {
+    font-size: 1.5em;
+  }
+
+  form#new_prospect div.field, form#new_prospect .actions {
+    font-size: 1.25em;
+    display: block;
+  }
+  form#new_prospect div.field input, form#new_prospect .actions input {
+    text-align: center;
+  }
+  form#new_prospect div.field input {
+    text-indent: 0em;
+  }
+  form#new_prospect div.actions {
+    margin-left: 5px;
+    margin-top: 25px;
+  }
+
+  div.flash.success {
+    padding: 30px 0;
+  }
 }
-
-// Primary Color Pallete 
-// #E7F727
-// #FACE28
-// #F5B127
-// #A2451A
-// #AF291C
-// #C92B48
-// #8C1F4B
-// #973994
-// #521C7E
-// #185BAE
-// #231F7F
-// #349ADA
-// #28567A
-// #4CC4C1
-// #215554
-// #56C80E
-
