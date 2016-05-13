@@ -150,13 +150,13 @@ div.carousel-caption {
   text-align: left;
   color: black;
 }
-div.carousel-caption h1 {
-  font-family: League Spartan;
-  font-size: 4em;
-  line-height: 125%;
+div.carousel-caption h1{
+    font-family: League Spartan;
+    font-size: 4em;
+    line-height: 125%;
 }
 div.carousel-caption h2 {
-  font-family: Unna Bold;
+  font-family: League Spartan;
   font-size: 2em;
   line-height: 125%;
 }
@@ -165,6 +165,28 @@ div.carousel-caption p {
   font-size: 2em;
   line-height: 125%;
 }
+h1#caption-2{
+  font-size: 2em;
+}
+p#caption-2{
+  font-size: 1.5em;
+}
+h2#caption-2{
+  font-size: 1.5em;
+}
+
+// div.carouse-caption.caption-2.col-sm-5.col-sm-offset-4{
+//   h2{
+//     font-family: League Spartan;
+//     font-size: 2em;
+//     line-height: 125%;
+//   }
+//   p{
+//     font-family: Unna Regular;
+//     font-size: 1.5em;
+//     line-height: 125%;
+//   }
+// }
 
 article.cta {
   margin-top: -50px;
@@ -242,6 +264,15 @@ div.item.active {
     height: 345px;
   }
 }
+@media only screen and (max-width: 1218px) {
+  p#caption-2{
+    font-size: 1.3em;
+  }
+  h2#caption-2{
+    font-size: 1.5em;
+  }
+}
+
 @media only screen and (max-width: 1199px) {
   article.cta {
     margin-left: 140px;
@@ -266,6 +297,13 @@ div.item.active {
 
   article.cta {
     margin-left: 50px;
+  }
+
+  p#caption-2{
+    font-size: 1.2em;
+  }
+  h2#caption-2{
+    font-size: 1.3em;
   }
 }
 @media only screen and (max-width: 991px) and (min-width: 0px) {
@@ -312,6 +350,11 @@ div.item.active {
     margin-left: 0px;
   }
 
+    iframe.video {
+    margin-top: 325px;
+    margin-left: 0px;
+  }
+
   div.item.active {
     height: 350px;
   }
@@ -323,11 +366,27 @@ div.item.active {
   .carousel.slide {
     height: 800px;
   }
+
+  p#caption-2{
+    font-size: 1.5em;
+  }
+  h2#caption-2{
+    font-size: 1.5em;
+  }
+
+
 }
 @media only screen and (max-width: 936px) and (min-width: 320px) {
   .col-sm-6 {
     width: 100%;
     margin-left: -99px;
+    height: 405px;
+    float: left;
+  }
+  .gif.col-sm-6 {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 325px;
     height: 405px;
     float: left;
   }
@@ -357,6 +416,12 @@ div.item.active {
   div.carousel-caption p {
     font-size: 1.5em;
   }
+  p#caption-2{
+    font-size: 1.2em;
+  }
+  h2#caption-2{
+    font-size: 1.2em;
+  }
 }
 @media only screen and (max-width: 712px) and (min-width: 320px) {
   .col-sm-6 {
@@ -364,6 +429,11 @@ div.item.active {
     margin-left: -99px;
     height: 300px;
   }
+  // .gif.col-sm-6{
+  //   width: 68%;
+  //   margin-left: 115px;
+  //   height: 246px;
+  // }
 }
 @media only screen and (max-width: 712px) and (min-width: 320px) {
   .col-sm-5.carousel-caption {
@@ -378,9 +448,9 @@ div.item.active {
     margin-left: 130px;
   }
 
-  .carousel.slide {
-    height: 635px;
-  }
+  // .carousel.slide {
+  //   height: 635px;
+  // }
 
   div.container.cta {
     margin-left: 150px;
@@ -421,6 +491,14 @@ div.item.active {
     margin-left: -25px;
     width: 100px;
   }
+  .gif.col-sm-6{
+    // width: 68%;
+    // margin-left: 115px;
+    height: 100%;
+  }
+  .carousel.slide {
+    height: 635px;
+  }
 }
 @media only screen and (max-width: 600px) and (min-width: 320px) {
   .col-sm-6 {
@@ -428,6 +506,7 @@ div.item.active {
     width: 450px;
     height: 250px;
   }
+
 }
 @media only screen and (max-width: 600px) and (min-width: 320px) {
   .col-sm-5.carousel-caption {

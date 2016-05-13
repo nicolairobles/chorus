@@ -38,6 +38,19 @@
     font-family: "Montserrat Regular";
 }
 
+div.carouse-caption.caption-2.col-sm-5.col-sm-offset-4{
+  h2{
+    font-family: League Spartan;
+    font-size: 2em;
+    line-height: 125%;
+  }
+  p{
+    font-family: Unna Regular;
+    font-size: 1.5em;
+    line-height: 125%;
+  }
+}
+
 
 
 
